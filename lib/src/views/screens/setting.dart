@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gdgapp/src/providers/navigation_provider.dart';
+import 'package:gdgapp/src/views/widgets/customAppBar.dart';
+import 'package:gdgapp/src/views/widgets/customDrawer.dart';
+import 'package:provider/provider.dart';
 
 class SettingScreen extends StatefulWidget {
   @override
@@ -8,6 +12,11 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    var _provider = Provider.of<NavigationProvider>(context);
+    return Scaffold(
+      drawer: CustomDrawer(),
+      appBar: customAppBar(context, "${_provider.title}",
+          isShowingTab: _provider.isShowingTab),
+    );
   }
 }

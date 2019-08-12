@@ -17,9 +17,6 @@ class _ContentScreenState extends State<ContentScreen> {
   Widget build(BuildContext context) {
     var _provider = Provider.of<NavigationProvider>(context);
     return SafeArea(
-        child: AnimatedOpacity(
-            duration: Duration(milliseconds: _provider.visible ? 500 : 100),
-            opacity: _provider.visible ? 1.0 : 0.0,
-            child: Scaffold(body: _provider.screen)));
+        child: Scaffold(body: _provider.screen));
   }
 }

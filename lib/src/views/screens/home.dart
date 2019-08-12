@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           alignment: Alignment.centerRight,
                           child: FlatButton(
                             onPressed: () {
-                              Utils.goto(context, ProgrammationScreen());
+                              _provider.setPage(1);
                             },
                             child: Text(
                               "Afficher tous les évènements",
