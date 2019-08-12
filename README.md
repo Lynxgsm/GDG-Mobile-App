@@ -1,16 +1,15 @@
-# gdgapp
+# GDG-Mobile-App
 
-A new Flutter project.
+Mini-CDC additionnel de ce projet
 
-## Getting Started
+## Reste à faire
 
-This project is a starting point for a Flutter application.
+Maps: aperçu google maps de localisation ohatran'ny page About na A propos amin'ny site web ireny, mampiseho "pin" pointant vers NextA
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Réservation: io aloha zany efa authenticated vao afaka manao réservation, ny tamin'ny I/O 2019 ary sady efa nahazo code ticket d'entrée vao afaka mi-réserver, fa ny antsika ajanona hoe authenticated ihany
+Session (Talk/Workshop):
+- Titre de la session
+- Description de la session
+- Quelle Salle => Collection Salles nécessaire
+- Ayant réservé => Notion de CAPACITE d'une salle
+- Waitlist (liste d'attente)
