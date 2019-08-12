@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "452828451306",
+    "firebase_url": "https://voiceep-f98ea.firebaseio.com",
+    "project_id": "voiceep-f98ea",
+    "storage_bucket": "voiceep-f98ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452828451306:android:cd01698b1402804e",
+        "android_client_info": {
+          "package_name": "com.example.gdgapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452828451306-rsth8k6d1f6t85iu613smi5gbkvtt61j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7_xu-gJRYegqBf-1YVjU1nPSGiEm4gLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452828451306-rsth8k6d1f6t85iu613smi5gbkvtt61j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "452828451306-b229446h5n94dla1b404a2mqiikcnkdu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.resocialapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
