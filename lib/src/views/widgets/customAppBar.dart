@@ -50,10 +50,10 @@ AppBar customAppBar(BuildContext context, String title,
   );
 }
 
-List<Widget> _buildTabs() {
-  return <Widget>[
-    Tab(text: "One"),
-    Tab(text: "Two"),
-    Tab(text: "Three"),
-  ];
-}
+// List<Widget> _buildTabs() {
+//   return <Widget>[
+//     Tab(text: "One"),
+//     Tab(text: "Two"),
+//     Tab(text: "Three"),
+//   ];
+// }

@@ -4,12 +4,12 @@ import 'package:gdgapp/src/views/widgets/customAppBar.dart';
 import 'package:gdgapp/src/views/widgets/customDrawer.dart';
 import 'package:provider/provider.dart';
 
-class PlanScreen extends StatefulWidget {
+class AboutScreen extends StatefulWidget {
   @override
-  _PlanScreenState createState() => _PlanScreenState();
+  _AboutScreenState createState() => _AboutScreenState();
 }
 
-class _PlanScreenState extends State<PlanScreen> {
+class _AboutScreenState extends State<AboutScreen> {
   @override
   Widget build(BuildContext context) {
     var _provider = Provider.of<NavigationProvider>(context);

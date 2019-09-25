@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:gdgapp/src/views/screens/about.dart';
 import 'package:gdgapp/src/views/screens/home.dart';
 import 'package:gdgapp/src/views/screens/information.dart';
-import 'package:gdgapp/src/views/screens/plan.dart';
+import 'package:gdgapp/src/views/screens/map.dart';
 import 'package:gdgapp/src/views/screens/programmation.dart';
-import 'package:gdgapp/src/views/screens/setting.dart';
 
 class NavigationProvider with ChangeNotifier {
   int _page = 0;
@@ -38,7 +38,7 @@ class NavigationProvider with ChangeNotifier {
         _isShowingTab = false;
         break;
       case 2:
-        _screen = PlanScreen();
+        _screen = MapScreen();
         _title = "Plan";
         _isShowingTab = false;
         break;
@@ -48,8 +48,8 @@ class NavigationProvider with ChangeNotifier {
         _isShowingTab = true;
         break;
       default:
-        _screen = SettingScreen();
-        _title = "Paramètres";
+        _screen = AboutScreen();
+        _title = "A propos";
         _isShowingTab = false;
         break;
     }

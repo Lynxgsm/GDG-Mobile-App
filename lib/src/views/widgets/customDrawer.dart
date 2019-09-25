@@ -34,7 +34,7 @@ class CustomDrawer extends Drawer {
               isActive: _provider.page == 3, action: () {
             selectAndClose(context, _provider, 3);
           }),
-          tile("Paramètres", FontAwesomeIcons.cog,
+          tile("A propos...", FontAwesomeIcons.cog,
               isActive: _provider.page == 4, action: () {
             selectAndClose(context, _provider, 4);
           }),

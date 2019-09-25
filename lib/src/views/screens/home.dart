@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gdgapp/src/constants/colors.dart';
-import 'package:gdgapp/src/constants/util.dart';
 import 'package:gdgapp/src/providers/navigation_provider.dart';
-import 'package:gdgapp/src/views/screens/programmation.dart';
 import 'package:gdgapp/src/views/widgets/customAppBar.dart';
 import 'package:gdgapp/src/views/widgets/customDrawer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -75,12 +75,15 @@ class MainContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: Firestore.instance.collection('annonces').snapshots(),
+      stream: Firestore.instance.collection('announcements').snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) return new Text('Error: ${snapshot.error}');
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
-            return new CircularProgressIndicator();
+            return Align(
+              alignment: Alignment.center,
+              child: new CircularProgressIndicator(),
+            );
           default:
             return Container(
               child: new Column(
@@ -95,6 +98,15 @@ class MainContainer extends StatelessWidget {
         }
       },
     );
+  }
+}
+
+_launchURL(String url) async {
+  print(url);
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
@@ -119,10 +131,17 @@ class AnnounceCard extends StatelessWidget {
             "$title",
             style: TextStyle(fontFamily: "GoogleSans Bold", fontSize: 16),
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 10),
-          ),
-          Text("$description")
+          Html(
+              data: """$description""",
+              defaultTextStyle:
+                  TextStyle(fontFamily: 'GoogleSans Medium', fontSize: 12),
+              padding: EdgeInsets.only(top: 10.0),
+              linkStyle: const TextStyle(
+                  decoration: TextDecoration.underline,
+                  color: Color.fromRGBO(26, 115, 233, 1)),
+              onLinkTap: (url) {
+                _launchURL(url);
+              })
         ],
       ),
     );

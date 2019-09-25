@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           fontFamily: "GoogleSans",
           primarySwatch: Colors.blue,
         ),
-        home: ContentScreen(),
+        home: SplashScreen(),
       ),
     );
   }
