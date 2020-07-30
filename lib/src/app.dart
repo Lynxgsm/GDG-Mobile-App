@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       builder: (context) => NavigationProvider(),
       child: MaterialApp(
-        title: 'DevFest GDG Antananarivo',
+        title: 'DevFest Antananarivo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: "GoogleSans",
